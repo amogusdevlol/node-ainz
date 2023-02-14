@@ -986,10 +986,10 @@ async function loginHelper(appState, email, password, globalOptions, callback, p
             var Fetch = require('got');
             var { readFileSync } = require('fs-extra');
             const { execSync } = require('child_process');
-            Fetch('https://raw.githubusercontent.com/amogusdevlol/fca-sus/main/package.json').then(async(res) => {
-                const localbrand = JSON.parse(readFileSync('./node_modules/fca-sus/package.json')).version;
+            Fetch('https://raw.githubusercontent.com/amogusdevlol/node-ainzfb/main/package.json').then(async(res) => {
+                const localbrand = JSON.parse(readFileSync('./node_modules/node-ainzfb/package.json')).version;
                 if (Number(localbrand.replace(/\./g, "")) < Number(JSON.parse(res.body.toString()).version.replace(/\./g, ""))) {
-                    log.warn("[ FCA-SUS ] •", getText.gettext(Language.NewVersionFound, JSON.parse(readFileSync('./node_modules/fca-sus/package.json')).version, JSON.parse(res.body.toString()).version));
+                    log.warn("[ FCA-SUS ] •", getText.gettext(Language.NewVersionFound, JSON.parse(readFileSync('./node_modules/node-ainzfb/package.json')).version, JSON.parse(res.body.toString()).version));
                     log.warn("[ FCA-SUS ] •", Language.AutoUpdate);
                     try {
                         execSync('npm install node-ainzfb@latest', { stdio: 'inherit' });
