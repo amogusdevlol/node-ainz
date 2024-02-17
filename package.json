@@ -1,6 +1,6 @@
 {
     "name": "node-ainzfb",
-    "version": "1.7.3-beta",
+    "version": "1.7.7-iu0tg78",
     "description": "A Facebook chat API that doesn't rely on XMPP. Will NOT be deprecated after April 30th 2015.",
     "scripts": {
         "test": "mocha",
